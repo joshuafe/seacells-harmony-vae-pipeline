@@ -1,0 +1,68 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Output directories (will be mounted as volumes)
+seacells_output/
+metacell_vae_output/
+plots/
+archive/
+workspaces/
+
+# System files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+desktop.ini
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (not needed in container)
+*.md
+!PIPELINE_README.md
+
+# Cache directories
+.cache/
+.numba_cache/
+.matplotlib/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Analysis files
+ANALYSIS_SUMMARY.md
+MEMORY_USAGE_ANALYSIS.md
+resume_plan.md
+
+# Config that's not needed
+.claude/
+
+# Data files that might be too large
+*.fcs
+*.csv
+*.npy

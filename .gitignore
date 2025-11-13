@@ -1,0 +1,180 @@
+# ==============================================================================
+# SEACells + Harmony + VAE Pipeline - Git Ignore
+# ==============================================================================
+#
+# This pipeline uses only specific scripts. All others are legacy/experimental.
+#
+# INCLUDED (tracked by git):
+#   - scripts/seacells_batch_correction.py
+#   - scripts/seacells_clustering_analysis.py
+#   - scripts/metacell_vae.py
+#   - scripts/create_marker_umaps.py
+#   - run_pipeline.py, run_pipeline.sh, docker-run.sh
+#   - environment.yml, Dockerfile, .dockerignore
+#   - README.md, PIPELINE_README.md, QUICKSTART.md, GIT_SETUP.md
+#   - SEACells/ package
+#
+# ==============================================================================
+
+# Data Files (EXCLUDE FROM GIT)
+# ------------------------------------------------------------------------------
+*.fcs
+*.FCS
+data/
+*.csv
+*.npy
+*.npz
+*.h5ad
+
+# Output Directories (EXCLUDE FROM GIT)
+# ------------------------------------------------------------------------------
+seacells_output/
+metacell_vae_output/
+plots/
+archive/
+workspaces/
+notebooks/
+config/
+logs/
+*.log
+
+# Legacy/Unused Scripts (EXCLUDE FROM GIT)
+# ------------------------------------------------------------------------------
+# Only track the 4 scripts used in current pipeline
+scripts/*
+!scripts/seacells_batch_correction.py
+!scripts/seacells_clustering_analysis.py
+!scripts/metacell_vae.py
+!scripts/create_marker_umaps.py
+
+# Python Cache & Compiled Files
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# Jupyter Notebooks
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb
+notebooks/
+
+# IDE & Editor Files
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Cache Directories
+# ------------------------------------------------------------------------------
+.cache/
+.numba_cache/
+.matplotlib/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Temporary Files
+# ------------------------------------------------------------------------------
+*.tmp
+*.bak
+*.swp
+*~.nib
+tmp/
+temp/
+
+# Optuna & Model Files
+# ------------------------------------------------------------------------------
+*.db
+*.db-journal
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+
+# Legacy Documentation (EXCLUDE FROM GIT)
+# ------------------------------------------------------------------------------
+# Only track: README.md, PIPELINE_README.md, QUICKSTART.md, GIT_SETUP.md
+ANALYSIS_SUMMARY.md
+MEMORY_USAGE_ANALYSIS.md
+resume_plan.md
+*_SUMMARY.md
+*_ANALYSIS.md
+
+# Large or Generated Files
+# ------------------------------------------------------------------------------
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+*.gif
+
+# Environment & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+config/secrets/
+
+# Git LFS (if you want to track some large files later)
+# ------------------------------------------------------------------------------
+# .gitattributes
+
+# Keep these directories but ignore contents
+# ------------------------------------------------------------------------------
+!.gitkeep
+SEACells/

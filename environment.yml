@@ -1,0 +1,31 @@
+name: metacell_vae_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - scikit-learn=1.4.2
+  - scanpy=1.9.8
+  - anndata=0.10.7
+  - umap-learn=0.5.5
+  - matplotlib=3.8.4
+  - seaborn=0.13.2
+  - optuna
+  - pytorch
+  - python-dotenv
+  - pip
+  - pip:
+    - numpy<2.0  # Pin numpy to prevent upgrade to 2.x
+    - flowio
+    - flowutils
+    - fcsparser
+    - harmonypy==0.0.10
+    - seacells==0.3.3
+    - phenograph
+    - pynndescent
+    - igraph
+    - leidenalg
+    - joblib
+    - tqdm
+    - python-dotenv
