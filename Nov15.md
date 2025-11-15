@@ -585,7 +585,101 @@ Files tracked:
 - Create hyperparameter tuning framework
 - Enable future sample projection
 
-**Next**: Test new framework, run hyperparameter tuning, validate archetypes
+**Next**: ✅ Tested framework with gamma cooldown experiments
+
+---
+
+## Current Status (End of Nov 15 Session)
+
+### What We Built Today
+
+1. **VAE Archetype Framework** (`scripts/vae_archetypes_with_priors.py`)
+   - Train-and-project: Train on Normal, project Abnormal/PTCy
+   - Biological prior loss functions with gamma cooldown
+   - Soft archetype assignments with entropy metric
+   - Complete save/load functionality for future projections
+
+2. **Supporting Tools**
+   - `scripts/tune_vae_archetypes.py` - Hyperparameter optimization (Optuna)
+   - `scripts/project_samples.py` - Project new samples onto trained model
+   - `compare_experiments.py` - Experiment comparison and analysis
+
+3. **Documentation**
+   - `README_VAE_ARCHETYPES.md` - Comprehensive usage guide
+   - `Nov15.md` (this file) - Project status and experimental log
+   - `test_gamma_cooldown.sh` - Quick test script
+
+### What We Tested
+
+Ran two experiments comparing gamma cooldown vs constant gamma:
+- **Gamma cooldown (0.5→0.0)**: Better loss, cleaner archetypes, more even distribution
+- **Constant gamma (0.1)**: Slightly lower entropy but duplicate archetypes
+
+**Verdict**: Gamma cooldown is superior → use as default going forward
+
+### Where Everything Is
+
+**Git Branch**: `nov15_gamma_cooldown_experiments`
+- Commits:
+  - `c3fbd94` - Initial framework
+  - `2f2f921` - Experiment results
+
+**Data Locations**:
+- Input: `seacells_output/three_groups_phenograph/integrated_metacells_harmony_phenograph.h5ad`
+- Experiment 1: `test_output/gamma_cooldown/`
+- Experiment 2: `test_output/constant_gamma/`
+- Comparison: `test_output/experiment_comparison.png`
+- Original VAE results: `vae_archetypes_output/`
+
+**Scripts**:
+- Main training: `scripts/vae_archetypes_with_priors.py`
+- Tuning: `scripts/tune_vae_archetypes.py`
+- Projection: `scripts/project_samples.py`
+- Comparison: `compare_experiments.py`
+
+### What Works
+
+✅ Train on reference (Normal) samples
+✅ Project test samples (Abnormal, PTCy)
+✅ Biological prior loss functions
+✅ Gamma cooldown schedule
+✅ Soft archetype assignments with entropy
+✅ Model save/load for future projection
+✅ Identifies biologically meaningful archetypes (NK, CD4+ Memory, CD8+ Memory, etc.)
+✅ Fast training (~2-3 min for 150 epochs on 605 samples)
+
+### What's Next
+
+**Immediate**:
+1. Longer training run (300 epochs) to see if results improve
+2. Hyperparameter sweep with Optuna to optimize cooldown schedule
+3. Biological validation: annotate archetypes with expected cell types
+
+**Short-term**:
+1. Compare Abnormal vs PTCy archetype compositions
+2. Identify high-entropy mixed phenotypes
+3. Quantify deviation from Normal baseline
+
+**Medium-term**:
+1. Sample annotation and filtering (work with user on metadata)
+2. Clinical correlation analysis
+3. Longitudinal tracking (if time-series data available)
+4. Refine biological priors based on domain knowledge
+
+### Key Decisions Made
+
+1. ✅ **Use train-and-project framework** - Normal as reference
+2. ✅ **Use gamma cooldown** - Start high (0.5), decay to low (0.0)
+3. ✅ **Use soft assignments** - Quantify mixed phenotypes with entropy
+4. ✅ **Single-stage model** - Data already lymphocyte-enriched
+5. ⏳ **Hyperparameter values** - Will optimize with Optuna
+
+### Open Questions
+
+1. What's the optimal gamma schedule? (will test via tuning)
+2. How to handle sample heterogeneity? (need metadata from user)
+3. What clinical outcomes to correlate with? (need user input)
+4. Should we add more biological priors? (B-cell, activation, exhaustion markers)
 
 ---
 
