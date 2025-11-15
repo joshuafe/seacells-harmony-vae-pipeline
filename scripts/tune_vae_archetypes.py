@@ -111,9 +111,9 @@ def objective(trial, base_args):
         # Objective: minimize entropy, maximize silhouette
         score = normalized_entropy - 0.5 * normalized_silhouette
 
-        # Store metrics for reporting
-        trial.set_user_attr('avg_entropy', avg_entropy)
-        trial.set_user_attr('silhouette', silhouette)
+        # Store metrics for reporting (convert numpy types to Python types for JSON serialization)
+        trial.set_user_attr('avg_entropy', float(avg_entropy))
+        trial.set_user_attr('silhouette', float(silhouette))
         trial.set_user_attr('output_dir', str(trial_output))
 
         print(f"Trial {trial.number}: score={score:.4f}, entropy={avg_entropy:.4f}, silhouette={silhouette:.4f}")
