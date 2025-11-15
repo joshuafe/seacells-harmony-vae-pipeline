@@ -471,6 +471,36 @@ Files tracked:
 - Archetype 7: NK cells (CD16↑2.16, CD56↑1.16, CD45RA↑1.13)
 - Archetype 3: CD8+ Activated (CD8↑1.16, CD69↑0.89)
 
+### Experiment 3: Longer Training with Gamma Cooldown
+**Date**: November 15, 2025
+**Status**: ✅ Complete
+**Config**:
+- Train on reference: Yes (Normal samples only, n=605)
+- Latent dim: 5
+- N archetypes: 10
+- Beta: 0.01
+- Gamma: 0.5 → 0.0 over 150 epochs (extended cooldown)
+- Total epochs: 300 (2x longer than Exp 1)
+**Output**: `test_output/gamma_cooldown_300epochs/`
+
+**Results**:
+- Final loss: 0.1429 (Recon=0.1306, KL=1.2324)
+- **9.4% improvement over 150 epochs** in total loss
+- Reference entropy: mean=1.372, median=1.430 (HIGHER than 150 epochs)
+- Gini coefficient: 0.307 (LESS even than 150 epochs at 0.182)
+
+**Key archetypes**:
+- Archetype 0: NK cells (CD16↑1.72, CD45RA↑1.11)
+- Archetype 8: CD8+ Effector Memory (CD8↑1.96, CD45RO↑1.51)
+- Archetype 9: CD4+ Memory (CD4↑1.82, CD45RO↑1.81)
+- Archetype 3: CD8+ Activated (CD8↑1.31, CD69↑1.14)
+
+**Trade-off observed**:
+- ✅ Lower loss (better data fit)
+- ⚠️ Higher entropy (less decisive assignments)
+- ⚠️ Less even distribution (some archetypes very small, n=15-21)
+- **Conclusion**: May be overfitting. **150 epochs appears optimal** for interpretability vs fit
+
 ### Experiment 2: Constant Gamma (Comparison)
 **Date**: November 15, 2025
 **Status**: ✅ Complete
@@ -547,10 +577,80 @@ Files tracked:
 **Next steps**:
 1. ✅ ~~Examine visualizations~~ - Done via compare_experiments.py
 2. ✅ ~~Compare biological coherence~~ - Cooldown has cleaner separation
-3. Run longer training (300 epochs) with cooldown
-4. Hyperparameter sweep with Optuna (include cooldown schedule)
-5. Compare Abnormal vs PTCy archetype compositions
-6. Identify high-entropy mixed phenotypes for further analysis
+3. ✅ ~~Run longer training (300 epochs)~~ - Lower loss but worse interpretability
+4. ✅ ~~Compare Abnormal vs PTCy archetype compositions~~ - MAJOR DIFFERENCES FOUND
+5. ✅ ~~Identify high-entropy mixed phenotypes~~ - 73% of all metacells, 78% Abnormal
+6. Hyperparameter sweep with Optuna (include cooldown schedule) - PENDING
+
+---
+
+### Analysis Results: Sample Type Differences
+
+**Experiment 4: Sample Composition Analysis**
+**Date**: November 15, 2025
+**Status**: ✅ Complete
+**Input**: `test_output/gamma_cooldown/metacells_with_archetypes.h5ad` (150 epoch model)
+**Output**: `test_output/sample_composition_analysis/`
+
+**Major Findings**:
+
+1. **HIGHLY SIGNIFICANT DIFFERENCES between sample types** (Chi-square p < 8.22e-134)
+
+2. **Abnormal samples have DRAMATICALLY different archetype distribution**:
+   - **Archetype 6**: 26.1% (vs 8.4% Normal) - **3.1x ENRICHED** ⬆️
+   - **Archetype 8**: 35.8% (vs 18.3% Normal) - **2.0x ENRICHED** ⬆️
+   - These 2 archetypes comprise **62% of Abnormal metacells**!
+
+   - **Depleted archetypes** in Abnormal:
+     - Archetype 0: 2.4% (vs 10.7% Normal) - 0.22x ⬇️
+     - Archetype 3: 1.7% (vs 10.1% Normal) - 0.17x ⬇️
+     - Archetype 9: 1.2% (vs 7.9% Normal) - 0.15x ⬇️
+   - **Lost diversity**: Multiple archetypes nearly absent in Abnormal
+
+3. **PTCy samples show similar but distinct pattern**:
+   - Also enriched in Archetypes 6 (24.5%, 2.9x) and 8 (29.8%, 1.6x)
+   - Additionally enriched in Archetype 4 (17.9% vs 11.2%, 1.6x)
+   - More diverse than Abnormal but still very different from Normal
+
+4. **ENTROPY DIFFERENCES ARE MASSIVE**:
+   - **Normal**: Mean entropy = 1.194 (27% high-entropy >1.5)
+   - **Abnormal**: Mean entropy = 1.645 (78% high-entropy) - ***p < 10^-300***
+   - **PTCy**: Mean entropy = 1.637 (75.5% high-entropy) - ***p < 10^-100***
+
+   **Interpretation**: Abnormal and PTCy samples have VASTLY more mixed/transitional phenotypes than Normal
+
+**Experiment 5: Mixed Phenotype Analysis**
+**Date**: November 15, 2025
+**Status**: ✅ Complete
+**Input**: `test_output/gamma_cooldown/metacells_with_archetypes.h5ad`
+**Output**: `test_output/mixed_phenotype_analysis/`
+
+**Key Findings**:
+
+1. **72.6% of ALL metacells are high-entropy** (entropy > 1.5)
+   - This is dominated by disease samples (78% Abnormal, 75% PTCy)
+
+2. **Most common archetype mixing patterns**:
+   - **Archetype 6 + 8**: Co-occur 1,780 times (most common!)
+   - **Archetype 2 + 8**: Co-occur 1,538 times
+   - **Archetype 4 + 8**: Co-occur 1,176 times
+   - **Archetype 4 + 6**: Co-occur 892 times
+
+   **Pattern**: Archetypes 6 and 8 (the disease-enriched ones) frequently co-occur in mixed states
+
+3. **Top mixing pattern in Abnormal: 6-8** (57 metacells)
+   - These are metacells with substantial probability for BOTH Archetypes 6 and 8
+   - Suggests transitional state or dual expression pattern
+
+4. **Normal samples have different mixing**:
+   - Top pattern: 2-8 and 8-2 (involving different archetypes)
+   - Much lower overall mixing (only 27% high-entropy)
+
+**Biological Interpretation**:
+- **Archetype 6**: CD8+ Effector Memory (CD8↑1.96, CD45RO↑1.51, CD45↑1.25)
+- **Archetype 8**: Less clear (CD45RA↑, CD3+CD19↑) - possible naive/memory intermediate?
+- **Hypothesis**: Abnormal/PTCy samples accumulate CD8+ T-cells in transitional or activated states
+- **Clinical significance**: Loss of phenotypic diversity + accumulation of specific CD8+ states may be disease signature
 
 ---
 
