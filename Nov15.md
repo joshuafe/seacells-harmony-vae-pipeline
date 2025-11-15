@@ -689,9 +689,48 @@ Files tracked:
 
 ---
 
-## MAJOR DISCOVERIES - November 15, 2025
+## ⚠️ CRITICAL LIMITATION: Batch Confounding
 
-### Disease Signature Found: CD8+ T-cell Accumulation
+### Perfect Confounding Detected
+
+**PROBLEM**: Each `sample_id` belongs to ONLY ONE `sample_type`:
+- Normal: 4 samples
+- Abnormal: 26 samples
+- PTCy: 8 samples
+
+**IMPLICATION**: We CANNOT definitively distinguish:
+- ✅ True biological differences between Normal and disease
+- ❌ Technical/batch effects (sample prep, run date, operator, etc.)
+
+**What was done**:
+- Data is Harmony batch-corrected (adata.X)
+- Harmony centers all markers to mean≈0
+- VAE trained on this corrected data
+
+**What remains uncertain**:
+- Harmony corrects **linear** batch effects well
+- **Nonlinear** batch effects might persist
+- Without technical replicates or mixed batches, cannot validate
+
+**Required for validation**:
+1. Technical replicates (same sample, different runs)
+2. Mixed sample pools (multiple types in one batch)
+3. External validation dataset
+4. Within-sample validation (not possible here - each sample is homogeneous)
+
+**Interpretation of findings below**:
+- Findings are **hypothesis-generating**, not definitive
+- Could represent true biology (optimistic)
+- Could represent batch effects (pessimistic)
+- Most likely: **mixture of both**
+- Treat as preliminary until validated
+
+---
+
+## POTENTIAL DISCOVERIES - November 15, 2025
+### (Caveat: May Include Batch Effects)
+
+### Potential Disease Signature: CD8+ T-cell Accumulation
 
 **THE BIG PICTURE**:
 1. Normal samples have diverse, stable lymphocyte phenotypes (10 distinct archetypes)
