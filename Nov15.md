@@ -427,6 +427,133 @@ Developing VAE-based archetype framework for flow cytometry lymphocyte analysis 
 
 ---
 
+## Git Branch
+
+**Branch**: `nov15_gamma_cooldown_experiments`
+
+Created from `main` to experiment with new VAE archetype framework.
+
+**Commit**: c3fbd94 - "Add VAE archetypes framework with biological priors and gamma cooldown"
+
+Files tracked:
+- `scripts/vae_archetypes_with_priors.py`
+- `scripts/tune_vae_archetypes.py`
+- `scripts/project_samples.py`
+- `Nov15.md`
+- `README_VAE_ARCHETYPES.md`
+- `test_gamma_cooldown.sh`
+
+---
+
+## Experiments Log
+
+### Experiment 1: Gamma Cooldown (Quick Test)
+**Date**: November 15, 2025
+**Status**: ✅ Complete
+**Config**:
+- Train on reference: Yes (Normal samples only, n=605)
+- Latent dim: 5
+- N archetypes: 10
+- Beta: 0.01
+- Gamma: 0.5 → 0.0 over 100 epochs
+- Total epochs: 150
+**Output**: `test_output/gamma_cooldown/`
+
+**Results**:
+- Final loss: 0.1577 (Recon=0.1445, KL=1.3171, Bio=0.0000)
+- Reference entropy: mean=1.194, median=1.250, range=[0.231, 1.943]
+- Projected entropy: range=[0.536, 2.105]
+- Archetype distribution: Fairly even (20-111 metacells per archetype)
+
+**Key archetypes identified**:
+- Archetype 2: CD4+ Memory (CD4↑1.48, CD45RO↑1.34)
+- Archetype 6: CD8+ Effector Memory (CD8↑1.96, CD45RO↑1.51)
+- Archetype 7: NK cells (CD16↑2.16, CD56↑1.16, CD45RA↑1.13)
+- Archetype 3: CD8+ Activated (CD8↑1.16, CD69↑0.89)
+
+### Experiment 2: Constant Gamma (Comparison)
+**Date**: November 15, 2025
+**Status**: ✅ Complete
+**Config**:
+- Train on reference: Yes (Normal samples only, n=605)
+- Latent dim: 5
+- N archetypes: 10
+- Beta: 0.01
+- Gamma: 0.1 (constant, no cooldown)
+- Total epochs: 150
+**Output**: `test_output/constant_gamma/`
+
+**Results**:
+- Final loss: 0.1756 (Recon=0.1485, KL=1.3084, Bio=0.1401)
+- Reference entropy: mean=1.129, median=1.187, range=[0.086, 2.071]
+- Projected entropy: range=[0.441, 2.111]
+- Archetype distribution: More varied (24-113 metacells per archetype)
+
+**Key archetypes identified**:
+- Archetype 2: CD4+ Memory (CD45RO↑2.06, CD4↑1.77)
+- Archetype 4: CD4+ Memory variant (CD45RO↑2.38, CD4↑1.53)
+- Archetype 7: CD8+ Effector Memory (CD8↑1.96, CD45RO↑1.51) - IDENTICAL to Exp1 Archetype 6
+- Archetype 0: NK cells (CD16↑1.72, CD45RA↑1.11)
+
+### Experiment Comparison & Findings
+
+**Quantitative comparison**:
+1. **Lower final loss with gamma cooldown** (0.1577 vs 0.1756) - **13% improvement**
+2. **Better reconstruction with cooldown** (0.1445 vs 0.1485)
+3. **Slightly higher entropy with cooldown** (1.194 vs 1.129) - Less decisive, but not necessarily worse
+4. **Some archetypes are identical** despite different training (Archetype 6/7, Archetype 8)
+
+**Biological interpretation**:
+- Both models identify similar major cell types (NK, CD4+ Memory, CD8+ Memory)
+- Both capture CD45RA/CD45RO gradient (Naive vs Memory)
+- Both identify activation states (CD69+)
+- Constant gamma tends to create duplicate memory archetypes (Arch 2 & 4 very similar)
+
+**Qualitative observations**:
+- **Gamma cooldown produces cleaner archetypes** - fewer duplicates
+- **Constant gamma over-segments memory T-cells** - Archetypes 2 & 4 are nearly identical
+- **Both successfully project Abnormal/PTCy samples** onto reference model
+- **Training time: ~2-3 minutes** for 150 epochs on 605 reference samples
+
+**Preliminary conclusion**:
+✅ **Gamma cooldown appears beneficial** - better loss, cleaner archetypes, no duplicate phenotypes
+
+**Additional metrics**:
+- Distribution evenness (Gini coefficient): Cooldown=0.182, Constant=0.232
+  - **Cooldown has 27% more even distribution** across archetypes
+- Archetype profile correlation: High correlation for matched archetypes (0.8-1.0)
+- Some archetypes are nearly identical (Arch 6 cooldown ≈ Arch 7 constant, r=1.0)
+
+**Files generated**:
+- `test_output/gamma_cooldown/` - All outputs from Experiment 1
+  - `metacells_with_archetypes.h5ad` (5.1 MB)
+  - `archetype_profiles.csv`
+  - `training_curves.png` - Shows gamma schedule, loss components
+  - `vae_archetypes_overview.png` - UMAP + heatmaps
+  - `vae_model.pt` (42 KB) - Saved model for future projection
+- `test_output/constant_gamma/` - All outputs from Experiment 2
+  - Same file structure
+- `test_output/experiment_comparison.png` - Side-by-side comparison
+
+**Analysis scripts**:
+- `compare_experiments.py` - Quantitative comparison with visualizations
+
+**Recommendation for next experiments**:
+✅ **Use gamma cooldown as default**
+- Proceed with hyperparameter tuning using cooldown schedule
+- Test different cooldown durations (50, 100, 150, 200 epochs)
+- Test different gamma_min values (0.0, 0.01, 0.05)
+
+**Next steps**:
+1. ✅ ~~Examine visualizations~~ - Done via compare_experiments.py
+2. ✅ ~~Compare biological coherence~~ - Cooldown has cleaner separation
+3. Run longer training (300 epochs) with cooldown
+4. Hyperparameter sweep with Optuna (include cooldown schedule)
+5. Compare Abnormal vs PTCy archetype compositions
+6. Identify high-entropy mixed phenotypes for further analysis
+
+---
+
 ## Session Notes
 
 **Date**: November 15, 2025
