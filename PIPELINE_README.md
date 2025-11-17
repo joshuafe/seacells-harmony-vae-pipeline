@@ -16,7 +16,7 @@ The workflow consists of three main steps, executed by three corresponding scrip
 
 This step uses the corrected 17-marker panel to generate a new `h5ad` file from the raw data. This script is **resumable** and **robust**. It will skip already processed samples and will strictly enforce that all 17 markers are present in a sample before processing, skipping invalid files.
 
-**Script:** `scripts/pipeline_step1_seacells_resumable_v5.py`
+**Script:** `scripts/pipeline_step1_seacells_resumable_v6.py`
 
 **What it does:**
 - Strictly validates that all 17 markers are present in each `.fcs` file.
