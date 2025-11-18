@@ -1,0 +1,24 @@
+{
+  "final_recon": 0.4600841999053955,
+  "final_kl": 3.5868568420410156,
+  "mean_purity": 0.8932068943977356,
+  "archetype_channels": [
+    "CD16+TIGIT",
+    "CD8+CD14",
+    "CD56",
+    "CD45RA",
+    "CD366",
+    "CD69",
+    "CD25",
+    "CD4+CD33",
+    "CD62L",
+    "CD152",
+    "CD45",
+    "CD45RO",
+    "CD279+CD24",
+    "CD95",
+    "CD34+CD223",
+    "CD197",
+    "CD3+CD19"
+  ]
+}

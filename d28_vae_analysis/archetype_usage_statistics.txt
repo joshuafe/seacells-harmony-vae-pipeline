@@ -1,0 +1,99 @@
+Statistical Comparison of Archetype Usage by Cohort
+============================================================
+
+--- Archetype archetype_0_prob ---  Kruskal-Wallis H-statistic: 38.6908
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  9.431219e-09  7.247930e-08
+PTCy    9.431219e-09  1.000000e+00  1.127151e-01
+Rux     7.247930e-08  1.127151e-01  1.000000e+00
+
+--- Archetype archetype_1_prob ---  Kruskal-Wallis H-statistic: 51.3974
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  5.659804e-10  3.549850e-11
+PTCy    5.659804e-10  1.000000e+00  3.640436e-01
+Rux     3.549850e-11  3.640436e-01  1.000000e+00
+
+--- Archetype archetype_2_prob ---  Kruskal-Wallis H-statistic: 24.2254
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal      PTCy           Rux
+Normal  1.000000e+00  0.001623  8.776474e-07
+PTCy    1.623322e-03  1.000000  2.768213e-01
+Rux     8.776474e-07  0.276821  1.000000e+00
+
+--- Archetype archetype_3_prob ---  Kruskal-Wallis H-statistic: 40.2464
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  3.246163e-07  1.139673e-09
+PTCy    3.246163e-07  1.000000e+00  9.071212e-01
+Rux     1.139673e-09  9.071212e-01  1.000000e+00
+
+--- Archetype archetype_4_prob ---  Kruskal-Wallis H-statistic: 145.8166
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  4.566504e-28  1.764683e-26
+PTCy    4.566504e-28  1.000000e+00  7.153082e-03
+Rux     1.764683e-26  7.153082e-03  1.000000e+00
+
+--- Archetype archetype_5_prob ---  Kruskal-Wallis H-statistic: 122.3376
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  1.528037e-13  2.878882e-28
+PTCy    1.528037e-13  1.000000e+00  4.010667e-02
+Rux     2.878882e-28  4.010667e-02  1.000000e+00
+
+--- Archetype archetype_6_prob ---  Kruskal-Wallis H-statistic: 1.7613
+  P-value: 0.4145
+
+--- Archetype archetype_7_prob ---  Kruskal-Wallis H-statistic: 63.0402
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  7.797056e-01  8.210319e-10
+PTCy    7.797056e-01  1.000000e+00  9.673797e-11
+Rux     8.210319e-10  9.673797e-11  1.000000e+00
+
+--- Archetype archetype_8_prob ---  Kruskal-Wallis H-statistic: 17.1755
+  P-value: 0.0002
+
+  Post-hoc Dunn's test (p-values):
+          Normal      PTCy       Rux
+Normal  1.000000  0.000049  0.001796
+PTCy    0.000049  1.000000  0.070667
+Rux     0.001796  0.070667  1.000000
+
+--- Archetype archetype_9_prob ---  Kruskal-Wallis H-statistic: 1.1523
+  P-value: 0.5621
+
+--- Archetype archetype_10_prob ---  Kruskal-Wallis H-statistic: 24.1959
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal      PTCy           Rux
+Normal  1.000000e+00  0.001173  9.240134e-07
+PTCy    1.173139e-03  1.000000  3.351427e-01
+Rux     9.240134e-07  0.335143  1.000000e+00
+
+--- Archetype archetype_11_prob ---  Kruskal-Wallis H-statistic: 127.7136
+  P-value: 0.0000
+
+  Post-hoc Dunn's test (p-values):
+              Normal          PTCy           Rux
+Normal  1.000000e+00  2.634777e-18  3.772576e-28
+PTCy    2.634777e-18  1.000000e+00  6.883977e-01
+Rux     3.772576e-28  6.883977e-01  1.000000e+00
+

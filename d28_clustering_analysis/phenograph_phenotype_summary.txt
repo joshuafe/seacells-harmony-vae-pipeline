@@ -1,0 +1,50 @@
+Cluster Phenotype Analysis Summary
+========================================
+
+--- Normal-dominant Clusters ---
+  Cluster 11:
+    Top Markers: CD45RO, CD8+CD14, CD45, CD3+CD19, CD25 BB515
+  Cluster 13:
+    Top Markers: CD279+CD24, CD366, CD45RA, CD62L, CD152 R718
+  Cluster 14:
+    Top Markers: CD45RA, CD197, CD34+CD223, CD366, CD25 BB515
+  Cluster 15:
+    Top Markers: CD45RO, CD4+CD33, CD45, CD3+CD19, CD25 BB515
+  Cluster 17:
+    Top Markers: CD16+TIGIT, CD69, CD279+CD24, CD366, CD95
+  Cluster 18:
+    Top Markers: CD45RA, CD56, CD279+CD24, CD366, CD69
+
+--- Rux-dominant Clusters ---
+  Cluster 1:
+    Top Markers: CD45RO, CD152 R718, CD4+CD33, CD45, CD95
+  Cluster 3:
+    Top Markers: CD45RA, CD69, CD152 R718, CD4+CD33, CD25 BB515
+  Cluster 4:
+    Top Markers: CD45RA, CD56, CD366, CD25 BB515, CD279+CD24
+  Cluster 7:
+    Top Markers: CD4+CD33, CD197, CD3+CD19, CD95, CD45RO
+  Cluster 8:
+    Top Markers: CD8+CD14, CD197, CD45RA, CD3+CD19, CD62L
+  Cluster 12:
+    Top Markers: CD4+CD33, CD197, CD152 R718, CD3+CD19, CD62L
+  Cluster 16:
+    Top Markers: CD45RO, CD4+CD33, CD279+CD24, CD95, CD25 BB515
+
+--- PTCy-dominant Clusters ---
+None
+
+--- Mixed Clusters ---
+  Cluster 0:
+    Top Markers: CD8+CD14, CD279+CD24, CD45RO, CD366, CD69
+  Cluster 2:
+    Top Markers: CD34+CD223, CD45RO, CD279+CD24, CD45, CD8+CD14
+  Cluster 5:
+    Top Markers: CD8+CD14, CD45, CD3+CD19, CD45RO, CD279+CD24
+  Cluster 6:
+    Top Markers: CD56, CD45RA, CD16+TIGIT, CD366, CD25 BB515
+  Cluster 9:
+    Top Markers: CD25 BB515, CD4+CD33, CD62L, CD34+CD223, CD95
+  Cluster 10:
+    Top Markers: CD16+TIGIT, CD56, CD45RA, CD366, CD69
+

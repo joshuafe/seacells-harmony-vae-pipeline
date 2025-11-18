@@ -1,0 +1,5 @@
+numpy<2.0
+flowio
+flowutils
+harmonypy==0.0.10
+seacells==0.3.3

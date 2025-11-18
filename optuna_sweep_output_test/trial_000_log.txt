@@ -1,0 +1,9 @@
+[2025-11-06 16:01:43] --- Starting Trial 0 ---
+[2025-11-06 16:01:43] Calling run_single_experiment...
+[2025-11-06 16:02:00] run_single_experiment completed.
+[2025-11-06 16:02:00] metrics.json saved.
+[2025-11-06 16:02:00] Saving reference alpha.npy and scaled_data.npy...
+[2025-11-06 16:02:00] Arrays saved.
+[2025-11-06 16:02:00] Calling save_visual_summary...
+[2025-11-06 16:02:24] save_visual_summary completed.
+[2025-11-06 16:02:24] --- Trial 0 successful ---

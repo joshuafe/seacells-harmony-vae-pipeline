@@ -1,0 +1,21 @@
+Channel Disambiguation Analysis Report
+========================================
+
+--- CD16+TIGIT -> CD16 vs TIGIT ---  Correlation: 0.6147
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD16_vs_TIGIT.png
+
+--- CD8+CD14 -> CD8 vs CD14 ---  Correlation: 0.3376
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD8_vs_CD14.png
+
+--- CD4+CD33 -> CD4 vs CD33 ---  Correlation: 0.4778
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD4_vs_CD33.png
+
+--- CD279+CD24 -> CD279 vs CD24 ---  Correlation: 0.3703
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD279_vs_CD24.png
+
+--- CD34+CD223 -> CD34 vs CD223 ---  Correlation: 0.4904
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD34_vs_CD223.png
+
+--- CD3+CD19 -> CD3 vs CD19 ---  Correlation: -0.1261
+  Scatter plot saved to: d28_vae_analysis/disambiguation_CD3_vs_CD19.png
+

@@ -1,0 +1,28 @@
+Statistical Comparison of Interstitial Cells by Cohort
+============================================================
+
+Entropy Threshold: 2.2313 (75th percentile)
+
+Contingency Table:
+is_interstitial  False  True 
+cohort                       
+Normal             582    252
+PTCy               598    233
+Rux               1816    514
+
+Proportion of Interstitial Cells within each Cohort:
+is_interstitial     False     True 
+cohort                             
+Normal           0.697842  0.302158
+PTCy             0.719615  0.280385
+Rux              0.779399  0.220601
+
+Chi-Squared Test Results:
+  Chi-squared statistic: 26.9285
+  P-value: 0.0000
+  Degrees of freedom: 2
+
+Expected Frequencies:
+[[ 625.44780976  208.55219024]
+ [ 623.1979975   207.8020025 ]
+ [1747.35419274  582.64580726]]

@@ -1,0 +1,326 @@
+Ranked Marker Expression for each Archetype (by Z-score)
+============================================================
+
+--- Archetype 1: Archetype 1: CD45RA/CD197^hi CD8+CD14/CD45RO/CD45^lo ---
+CD197           | Z-score: +1.19
+CD45RA          | Z-score: +1.10
+CD366           | Z-score: +0.99
+CD34+CD223      | Z-score: +0.74
+CD62L           | Z-score: +0.73
+CD279+CD24      | Z-score: +0.65
+CD25            | Z-score: +0.52
+CD152           | Z-score: +0.44
+CD56            | Z-score: +0.40
+CD4+CD33        | Z-score: +0.07
+CD69            | Z-score: -0.09
+CD95            | Z-score: -0.32
+CD3+CD19        | Z-score: -0.33
+CD16+TIGIT      | Z-score: -0.72
+CD45            | Z-score: -1.02
+CD45RO          | Z-score: -2.06
+CD8+CD14        | Z-score: -2.29
+
+--- Archetype 2: Archetype 2: CD45/CD16+TIGIT/CD8+CD14^hi CD34+CD223/CD152^lo ---
+CD8+CD14        | Z-score: +2.12
+CD16+TIGIT      | Z-score: +1.65
+CD45            | Z-score: +1.18
+CD69            | Z-score: +0.85
+CD45RO          | Z-score: +0.64
+CD56            | Z-score: +0.56
+CD95            | Z-score: +0.25
+CD3+CD19        | Z-score: +0.15
+CD366           | Z-score: -0.21
+CD279+CD24      | Z-score: -0.48
+CD197           | Z-score: -0.79
+CD4+CD33        | Z-score: -0.81
+CD45RA          | Z-score: -0.86
+CD25            | Z-score: -0.88
+CD62L           | Z-score: -0.95
+CD152           | Z-score: -1.17
+CD34+CD223      | Z-score: -1.24
+
+--- Archetype 3: Archetype 3: CD95/CD366/CD279+CD24^hi CD45RO/CD3+CD19/CD8+CD14^lo ---
+CD279+CD24      | Z-score: +1.12
+CD366           | Z-score: +1.01
+CD95            | Z-score: +1.00
+CD69            | Z-score: +0.87
+CD45RA          | Z-score: +0.87
+CD16+TIGIT      | Z-score: +0.81
+CD56            | Z-score: +0.68
+CD62L           | Z-score: +0.47
+CD152           | Z-score: +0.44
+CD197           | Z-score: +0.21
+CD34+CD223      | Z-score: -0.12
+CD4+CD33        | Z-score: -0.59
+CD25            | Z-score: -0.60
+CD45            | Z-score: -1.09
+CD8+CD14        | Z-score: -1.43
+CD3+CD19        | Z-score: -1.75
+CD45RO          | Z-score: -1.89
+
+--- Archetype 4: Archetype 4: CD56/CD16+TIGIT/CD8+CD14^hi CD4+CD33/CD25^lo ---
+CD8+CD14        | Z-score: +1.94
+CD16+TIGIT      | Z-score: +1.35
+CD56            | Z-score: +1.04
+CD69            | Z-score: +0.91
+CD45RA          | Z-score: +0.53
+CD366           | Z-score: +0.53
+CD279+CD24      | Z-score: +0.52
+CD95            | Z-score: +0.34
+CD3+CD19        | Z-score: +0.06
+CD45            | Z-score: -0.35
+CD62L           | Z-score: -0.44
+CD152           | Z-score: -0.50
+CD197           | Z-score: -0.76
+CD45RO          | Z-score: -0.81
+CD34+CD223      | Z-score: -0.98
+CD25            | Z-score: -1.46
+CD4+CD33        | Z-score: -1.92
+
+--- Archetype 5: Archetype 5: CD69/CD16+TIGIT^hi CD4+CD33/CD45RO/CD8+CD14^lo ---
+CD16+TIGIT      | Z-score: +2.01
+CD69            | Z-score: +1.06
+CD95            | Z-score: +0.79
+CD25            | Z-score: +0.71
+CD34+CD223      | Z-score: +0.68
+CD45RA          | Z-score: +0.55
+CD62L           | Z-score: +0.38
+CD279+CD24      | Z-score: +0.22
+CD366           | Z-score: +0.22
+CD152           | Z-score: +0.06
+CD197           | Z-score: -0.03
+CD56            | Z-score: -0.07
+CD45            | Z-score: -0.64
+CD3+CD19        | Z-score: -1.12
+CD8+CD14        | Z-score: -1.23
+CD45RO          | Z-score: -1.74
+CD4+CD33        | Z-score: -1.86
+
+--- Archetype 6: Archetype 6: CD45/CD16+TIGIT/CD8+CD14^hi CD152/CD4+CD33/CD62L^lo ---
+CD8+CD14        | Z-score: +2.16
+CD16+TIGIT      | Z-score: +1.33
+CD45            | Z-score: +1.21
+CD3+CD19        | Z-score: +0.83
+CD45RO          | Z-score: +0.73
+CD56            | Z-score: +0.53
+CD69            | Z-score: +0.46
+CD45RA          | Z-score: -0.11
+CD34+CD223      | Z-score: -0.18
+CD366           | Z-score: -0.31
+CD95            | Z-score: -0.46
+CD25            | Z-score: -0.60
+CD197           | Z-score: -0.77
+CD279+CD24      | Z-score: -0.84
+CD62L           | Z-score: -1.14
+CD4+CD33        | Z-score: -1.28
+CD152           | Z-score: -1.56
+
+--- Archetype 7: Archetype 7: CD25/CD4+CD33^hi CD56/CD16+TIGIT/CD45RA^lo ---
+CD4+CD33        | Z-score: +2.21
+CD25            | Z-score: +1.07
+CD152           | Z-score: +0.98
+CD45            | Z-score: +0.66
+CD34+CD223      | Z-score: +0.62
+CD3+CD19        | Z-score: +0.59
+CD197           | Z-score: +0.58
+CD62L           | Z-score: +0.44
+CD45RO          | Z-score: +0.24
+CD95            | Z-score: -0.23
+CD366           | Z-score: -0.67
+CD69            | Z-score: -0.68
+CD279+CD24      | Z-score: -0.78
+CD8+CD14        | Z-score: -0.84
+CD45RA          | Z-score: -1.12
+CD16+TIGIT      | Z-score: -1.37
+CD56            | Z-score: -1.69
+
+--- Archetype 8: Archetype 8: CD69/CD45RA/CD16+TIGIT^hi CD45RO/CD4+CD33^lo ---
+CD16+TIGIT      | Z-score: +1.55
+CD45RA          | Z-score: +1.32
+CD69            | Z-score: +1.25
+CD279+CD24      | Z-score: +1.15
+CD95            | Z-score: +0.83
+CD56            | Z-score: +0.68
+CD366           | Z-score: +0.39
+CD197           | Z-score: +0.02
+CD45            | Z-score: -0.19
+CD34+CD223      | Z-score: -0.34
+CD62L           | Z-score: -0.41
+CD152           | Z-score: -0.47
+CD8+CD14        | Z-score: -0.53
+CD3+CD19        | Z-score: -0.77
+CD25            | Z-score: -0.90
+CD4+CD33        | Z-score: -1.58
+CD45RO          | Z-score: -1.99
+
+--- Archetype 9: Archetype 9: CD279+CD24/CD366/CD45RA^hi CD45RO/CD45/CD8+CD14^lo ---
+CD45RA          | Z-score: +1.41
+CD366           | Z-score: +1.24
+CD279+CD24      | Z-score: +1.15
+CD62L           | Z-score: +0.99
+CD56            | Z-score: +0.87
+CD152           | Z-score: +0.70
+CD197           | Z-score: +0.60
+CD95            | Z-score: +0.27
+CD69            | Z-score: +0.26
+CD16+TIGIT      | Z-score: -0.15
+CD34+CD223      | Z-score: -0.19
+CD4+CD33        | Z-score: -0.75
+CD25            | Z-score: -0.83
+CD3+CD19        | Z-score: -0.89
+CD8+CD14        | Z-score: -1.46
+CD45            | Z-score: -1.57
+CD45RO          | Z-score: -1.65
+
+--- Archetype 10: Archetype 10: CD45RA/CD279+CD24/CD56^hi CD4+CD33/CD25/CD45RO^lo ---
+CD56            | Z-score: +1.75
+CD279+CD24      | Z-score: +1.47
+CD45RA          | Z-score: +1.47
+CD366           | Z-score: +0.95
+CD197           | Z-score: +0.47
+CD152           | Z-score: +0.37
+CD69            | Z-score: +0.24
+CD62L           | Z-score: +0.24
+CD16+TIGIT      | Z-score: +0.14
+CD3+CD19        | Z-score: -0.21
+CD34+CD223      | Z-score: -0.50
+CD95            | Z-score: -0.55
+CD8+CD14        | Z-score: -0.64
+CD45            | Z-score: -0.76
+CD45RO          | Z-score: -1.44
+CD25            | Z-score: -1.47
+CD4+CD33        | Z-score: -1.54
+
+--- Archetype 11: Archetype 11: CD56^hi CD45RO/CD4+CD33/CD3+CD19^lo ---
+CD56            | Z-score: +1.57
+CD45RA          | Z-score: +0.95
+CD16+TIGIT      | Z-score: +0.89
+CD279+CD24      | Z-score: +0.89
+CD366           | Z-score: +0.76
+CD69            | Z-score: +0.63
+CD197           | Z-score: +0.48
+CD34+CD223      | Z-score: +0.34
+CD25            | Z-score: +0.26
+CD95            | Z-score: +0.26
+CD62L           | Z-score: +0.01
+CD45            | Z-score: -0.42
+CD8+CD14        | Z-score: -0.56
+CD152           | Z-score: -0.85
+CD3+CD19        | Z-score: -1.29
+CD4+CD33        | Z-score: -1.94
+CD45RO          | Z-score: -1.99
+
+--- Archetype 12: Archetype 12: CD16+TIGIT^hi CD4+CD33/CD45RO^lo ---
+CD16+TIGIT      | Z-score: +2.05
+CD69            | Z-score: +0.97
+CD34+CD223      | Z-score: +0.90
+CD25            | Z-score: +0.85
+CD152           | Z-score: +0.59
+CD197           | Z-score: +0.55
+CD8+CD14        | Z-score: +0.52
+CD56            | Z-score: +0.43
+CD95            | Z-score: -0.10
+CD45RA          | Z-score: -0.36
+CD62L           | Z-score: -0.40
+CD45            | Z-score: -0.46
+CD366           | Z-score: -0.47
+CD3+CD19        | Z-score: -0.57
+CD279+CD24      | Z-score: -0.70
+CD45RO          | Z-score: -1.41
+CD4+CD33        | Z-score: -2.39
+
+--- Archetype 13: Archetype 13: CD3+CD19/CD4+CD33/CD45RO^hi CD56/CD45RA/CD366^lo ---
+CD45RO          | Z-score: +1.78
+CD4+CD33        | Z-score: +1.75
+CD3+CD19        | Z-score: +1.03
+CD45            | Z-score: +1.02
+CD8+CD14        | Z-score: +0.69
+CD25            | Z-score: +0.59
+CD152           | Z-score: +0.20
+CD34+CD223      | Z-score: +0.00
+CD95            | Z-score: -0.04
+CD62L           | Z-score: -0.24
+CD197           | Z-score: -0.43
+CD69            | Z-score: -0.44
+CD16+TIGIT      | Z-score: -0.86
+CD279+CD24      | Z-score: -0.95
+CD366           | Z-score: -1.10
+CD45RA          | Z-score: -1.38
+CD56            | Z-score: -1.61
+
+--- Archetype 14: Archetype 14: CD45RO/CD45/CD8+CD14^hi CD45RA/CD62L^lo ---
+CD8+CD14        | Z-score: +2.04
+CD45            | Z-score: +1.48
+CD45RO          | Z-score: +1.43
+CD16+TIGIT      | Z-score: +1.06
+CD69            | Z-score: +0.47
+CD3+CD19        | Z-score: +0.31
+CD95            | Z-score: +0.27
+CD4+CD33        | Z-score: +0.15
+CD56            | Z-score: +0.11
+CD25            | Z-score: -0.58
+CD152           | Z-score: -0.76
+CD34+CD223      | Z-score: -0.81
+CD366           | Z-score: -0.82
+CD279+CD24      | Z-score: -0.98
+CD197           | Z-score: -0.99
+CD62L           | Z-score: -1.06
+CD45RA          | Z-score: -1.32
+
+--- Archetype 15: Archetype 15: CD45RA/CD56/CD366^hi CD4+CD33/CD45RO/CD152^lo ---
+CD366           | Z-score: +1.55
+CD56            | Z-score: +1.54
+CD45RA          | Z-score: +1.17
+CD69            | Z-score: +0.62
+CD3+CD19        | Z-score: +0.60
+CD16+TIGIT      | Z-score: +0.60
+CD197           | Z-score: +0.22
+CD8+CD14        | Z-score: +0.12
+CD279+CD24      | Z-score: +0.03
+CD45            | Z-score: +0.01
+CD95            | Z-score: -0.12
+CD62L           | Z-score: -0.13
+CD34+CD223      | Z-score: -0.39
+CD25            | Z-score: -1.08
+CD152           | Z-score: -1.18
+CD45RO          | Z-score: -1.27
+CD4+CD33        | Z-score: -2.31
+
+--- Archetype 16: Archetype 16: CD152/CD4+CD33/CD45RO^hi CD69/CD16+TIGIT/CD56^lo ---
+CD45RO          | Z-score: +1.53
+CD4+CD33        | Z-score: +1.40
+CD152           | Z-score: +1.19
+CD25            | Z-score: +1.13
+CD62L           | Z-score: +1.04
+CD34+CD223      | Z-score: +0.45
+CD197           | Z-score: +0.40
+CD8+CD14        | Z-score: +0.35
+CD3+CD19        | Z-score: -0.02
+CD45            | Z-score: -0.24
+CD45RA          | Z-score: -0.55
+CD95            | Z-score: -0.76
+CD366           | Z-score: -0.89
+CD279+CD24      | Z-score: -0.92
+CD56            | Z-score: -1.06
+CD16+TIGIT      | Z-score: -1.41
+CD69            | Z-score: -1.65
+
+--- Archetype 17: Archetype 17: CD45/CD45RO/CD8+CD14^hi CD152/CD62L^lo ---
+CD8+CD14        | Z-score: +2.08
+CD45RO          | Z-score: +1.64
+CD45            | Z-score: +1.28
+CD3+CD19        | Z-score: +0.85
+CD16+TIGIT      | Z-score: +0.77
+CD56            | Z-score: +0.58
+CD25            | Z-score: +0.16
+CD34+CD223      | Z-score: -0.10
+CD69            | Z-score: -0.30
+CD45RA          | Z-score: -0.52
+CD197           | Z-score: -0.63
+CD95            | Z-score: -0.70
+CD279+CD24      | Z-score: -0.79
+CD366           | Z-score: -0.80
+CD4+CD33        | Z-score: -1.00
+CD62L           | Z-score: -1.16
+CD152           | Z-score: -1.34
+
